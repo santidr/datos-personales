@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #f2f2f2;
+}
+
+header {
+    background: #1d3c41;
+    margin-bottom: 20px;
+}
+
+header .logo-menu .logo,
+header .logo-menu .menu {
+    display: flex;
+}
+
+header .logo-menu .logo {
+    font-size: 26px;
+    color: #f2f2f2;
+    margin: 10px 0;
+}
+
+header .logo-menu .menu {
+    justify-content: flex-end;
+}
+
+header .logo-menu .menu a {
+    display: inline-block;
+    padding: 20px;
+    transition: all .2s ease;
+}
+
+header .logo-menu .menu a:hover {
+    text-decoration: none;
+    background: #f2f2f2;
+    color: #1d3c41;
+}
+
+@media screen and (max-width: 767px) {
+    header .logo-menu .logo,
+    header .logo-menu .menu {
+        justify-content: center;
+    }
+}
+
+/*----------------------------- Estilos del Login ---------------------------------*/
+.login {
+    margin-top: 10%;
+}
+
+.login h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login form {
+    padding: 20px;
+}
+
+.login form a {
+    color: #444;
+}

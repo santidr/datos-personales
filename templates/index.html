@@ -1,0 +1,32 @@
+{% extends 'empleados/base.html' %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+<div class="login">
+    <h2>Project name</h2>
+    <form method="POST">{% csrf_token %}
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+                <div class="form-group">
+                    <label for="username">Nombre de usuario:</label>
+                    <input class="form-control" type="text" name="username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña:</label>
+                    <input class="form-control" type="password" name="password">
+                </div>
+                <div class="form-group">
+                    <a href="#">Se te olvidó la contraseña?</a>
+                    <input class="form-control btn btn-primary" type="submit" value="Login">
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

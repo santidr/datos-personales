@@ -1,0 +1,14 @@
+{% extends 'empleados/base.html' %}
+
+{% block title %}
+    Nuevo - persona
+{% endblock %}
+
+{% block content %}
+<div class="col-xs-12 col-sm-6 col-sm-offset-3">
+    <form method="POST">{% csrf_token %}
+        {{ form.as_p }}
+        <input class="btn btn-success" type="submit" value="Guardar">
+    </form>
+</div>
+{% endblock %}

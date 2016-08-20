@@ -1,0 +1,37 @@
+{% extends 'empleados/base.html' %}
+
+{% block title %}
+    Datos personales
+{% endblock %}
+
+{% block content %}
+    {% if object_list %}
+    <table  class="table table-striped">
+        <thead>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Edad</th>
+            <th>Email</th>
+            <th>Acción</th>
+        </thead>
+        <tbody>
+            {% for persona in object_list %}
+            <tr>
+                <td>{{ persona.nombre }}</td>
+                <td>{{ persona.apellidos }}</td>
+                <td>{{ persona.edad }}</td>
+                <td>{{ persona.email }}</td>
+                <td>
+                    <a class="btn btn-primary" href="{% url 'editar_persona' persona.id %}">Editar</a>
+                    <a class="btn btn-danger" href="{% url 'eliminar_persona' persona.id %}">Eliminar</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    {% else %}
+    <h1>No hay ningún registro que mostrar</h1>
+    {% endif %}
+
+{% endblock %}
